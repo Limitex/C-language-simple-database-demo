@@ -1,0 +1,170 @@
+{
+    "tasks": [
+        {
+            "label": "make - str_read",
+            "type": "cppbuild",
+            "command": "gcc",
+            "args": [
+                "-c",
+                "-g",
+                "${workspaceFolder}/str_read/str_read.c",
+                "-o",
+                "${workspaceFolder}/.working/str_read.o"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }, // make - str_read
+        {
+            "label": "make - database",
+            "type": "cppbuild",
+            "command": "gcc",
+            "args": [
+                "-c",
+                "-g",
+                "${workspaceFolder}/database/database.c",
+                "-o",
+                "${workspaceFolder}/.working/database.o"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }, // make - database
+        {
+            "label": "make - commands/extract",
+            "type": "cppbuild",
+            "command": "gcc",
+            "args": [
+                "-c",
+                "-g",
+                "${workspaceFolder}/commands/extract/extract.c",
+                "-o",
+                "${workspaceFolder}/.working/extract.o"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }, // make - commands/extract
+        {
+            "label": "make - commands/where",
+            "type": "cppbuild",
+            "command": "gcc",
+            "args": [
+                "-c",
+                "-g",
+                "${workspaceFolder}/commands/extract/where.c",
+                "-o",
+                "${workspaceFolder}/.working/where.o"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }, // make - commands/where
+        {
+            "label": "make - commands[select]",
+            "type": "cppbuild",
+            "command": "gcc",
+            "args": [
+                "-c",
+                "-g",
+                "${workspaceFolder}/commands/select.c",
+                "-o",
+                "${workspaceFolder}/.working/select.o"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }, // make - commands[select]
+        {
+            "label": "make - commands[info]",
+            "type": "cppbuild",
+            "command": "gcc",
+            "args": [
+                "-c",
+                "-g",
+                "${workspaceFolder}/commands/info.c",
+                "-o",
+                "${workspaceFolder}/.working/info.o"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }, // make - commands[info]
+        {
+            "label": "make - commands[update]",
+            "type": "cppbuild",
+            "command": "gcc",
+            "args": [
+                "-c",
+                "-g",
+                "${workspaceFolder}/commands/update.c",
+                "-o",
+                "${workspaceFolder}/.working/update.o"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }, // make - commands[update]
+        {
+            "label": "make - commands[insert]",
+            "type": "cppbuild",
+            "command": "gcc",
+            "args": [
+                "-c",
+                "-g",
+                "${workspaceFolder}/commands/insert.c",
+                "-o",
+                "${workspaceFolder}/.working/insert.o"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }, // make - commands[insert]
+        {
+            "type": "cppbuild",
+            "label": "debug build",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "${workspaceFolder}/main.c",
+                "${workspaceFolder}/.working/str_read.o",
+                "${workspaceFolder}/.working/database.o",
+                "${workspaceFolder}/.working/extract.o",
+                "${workspaceFolder}/.working/where.o",
+                "${workspaceFolder}/.working/select.o",
+                "${workspaceFolder}/.working/info.o",
+                "${workspaceFolder}/.working/update.o",
+                "${workspaceFolder}/.working/insert.o",
+                "-o",
+                "${workspaceFolder}/.working/main"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/.working" 
+            },
+            "dependsOn": [
+                "make - str_read",
+                "make - database",
+                "make - commands/extract",
+                "make - commands/where",
+                "make - commands[select]",
+                "make - commands[info]",
+                "make - commands[update]",
+                "make - commands[insert]"
+            ],
+            "detail": "Debug"
+        }  // debug build
+    ],
+    "version": "2.0.0"
+}

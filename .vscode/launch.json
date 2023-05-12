@@ -1,0 +1,57 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "build and debug active file 1",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/.working/main",
+            "args": ["dummy_10.csv"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "lldb",
+            "preLaunchTask": "debug build"
+        },
+        {
+            "name": "build and debug active file 2",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/.working/main",
+            "args": ["dummy_100.csv"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "lldb",
+            "preLaunchTask": "debug build"
+        },
+        {
+            "name": "build and debug active file 3",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/.working/main",
+            "args": ["dummy_1000.csv"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "lldb",
+            "preLaunchTask": "debug build"
+        },
+        {
+            "name": "build and debug active file 4",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/.working/main",
+            "args": ["dummy_10000.csv"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "lldb",
+            "preLaunchTask": "debug build"
+        }
+    ]
+}
